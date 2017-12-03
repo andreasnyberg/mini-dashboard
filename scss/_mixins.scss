@@ -1,0 +1,57 @@
+
+
+/* ------------------------------- DEBUGGING OUTLINE ---------------------------- */
+$debugging: true;
+
+@mixin debug {
+	@if $debugging {
+		outline: 1px solid lime;
+	}
+}
+
+
+/* --------------------------- MEDIA QUERIES ----------------------------- */
+@mixin media($type) {
+
+	@if $type == mobile-big {
+		@media only screen and (min-width: 400px) {
+			@content;
+		}	
+	}
+
+	@elseif $type == tablet {
+            @media only screen and (min-width: 768px) {
+                @content;
+            }
+        }
+
+    @elseif $type == desk-small {
+        @media only screen and (min-width: 992px) {
+            @content;
+        }    
+    }
+
+    @elseif $type == desk-big {
+        @media only screen and (min-width: 1200px) {
+            @content;
+        }    
+    }
+
+    @elseif $type == desk-bigger {
+        @media only screen and (min-width: 1441px) {
+            @content;
+        }    
+    }
+
+    @elseif $type == mobile-only {
+        @media only screen and (max-width: 767px) {
+            @content;
+        }    
+    }
+
+    @elseif $type == tablet-only {
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+            @content;
+        }    
+    }
+}

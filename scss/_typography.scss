@@ -1,0 +1,112 @@
+//$boldy: 'Raleway', sans-serif;
+$boldy: 'Work Sans', sans-serif;
+
+
+html { 
+	font-size: 62.5%;
+
+	@include media(tablet) { font-size: 65%; }
+	@include media(desk-bigger) { font-size: 70%; }
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 1.4rem;
+}
+
+.weather__temperature-container {
+	.weather__temperature span {
+	    font-size: 7rem;
+	}
+}
+
+
+.weather__hour {
+    font-size: 1rem;
+    
+	.hour {
+		font-family: $boldy;
+		font-size: 1.4rem;
+	}
+}
+
+.col-weather--precipitation,
+.col-weather--wind-speed {
+	text-align: right;
+}
+
+.weather__precipitation,
+.weather__wind-speed {
+    font-size: 1rem;
+
+	span {
+		font-size: 1.4rem;
+	}
+}
+
+.weather__temperature {
+    font-size: 1rem;
+    margin-bottom: 0;
+
+	span {
+	    font-size: 2.2rem;
+	}
+}
+
+
+.weather__wind-speed span,
+.weather__precipitation span {
+	font-family: $boldy;
+	font-size: 1.7rem;
+    display: inline-block;
+}
+
+.departure__line-nr {
+    font-family: $boldy;
+	font-size: 1.7rem;
+    display: block;
+    letter-spacing: 0.7px;
+}
+
+.row--departure__departure-time {
+	font-size: 3rem;
+	font-style: italic;
+	font-weight: 900;
+	
+	.smaller {
+	    font-size: 1.3rem;
+	}
+}
+
+#log {
+    font-size: 1.2rem;
+
+	.fa {
+	    font-size: 1.4rem;
+	}
+}
+
+.btn-text {
+	font-size: 2rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.btn--refresh .fa {
+	font-size: 2.3rem;
+}
+
+.weather__temperature span,
+.btn-text,
+.row--departure__departure-time {
+	font-family: $boldy;
+}
+
+nav {
+	a {
+		font-size: 2.6rem;
+		font-weight: 900;
+		line-height: 3.2rem;
+		text-decoration: none !important;		
+	}
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mini-dashboard</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato|Work+Sans:800" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+	<nav class="routes-menu" id="routes-menu--overlay">
+      <ul class="routes-menu__ul" id="routes-menu__ul">
+      </ul>
+  </nav>
+
+	<main>
+		<div class="container">
+				<section class="weather section-wrapper" id="weather">
+					<p class="weather__divider-title now">just nu</p>
+
+					<div class="row row--weather-now">
+						<div class="col-xs-6">
+							<span class="weather__icon weather__icon--big" id="weather-now-icon"></span>
+						</div>	
+
+						<div class="col-xs-6 weather__temperature-container">
+
+							<p class="weather__temperature">
+								<span id="weather-now-degree"></span> &#8451;
+							</p>
+						</div>
+
+						<div class="col-xs-12 weather__wind-precipitation-container">
+							<p class="weather__wind-speed">
+								<span id="weather-now-windspeed"></span> m/s
+							</p>
+
+							<p class="weather__precipitation">
+								<span id="weather-now-precipitation"></span> mm
+							</p>
+						</div>
+					</div>
+
+					<div class="weather__lists">
+						<div class="weather__list">
+							<p class="weather__divider-title">idag</p>
+							<div id="weather-today"></div>		
+						</div>
+					
+						<div class="weather__list">
+							<p class="weather__divider-title">imorgon</p>
+							<div id="weather-tomorrow"></div>
+						</div>
+					</div>
+
+					<button class="btn btn-expand-weather" id="expand-weather">
+						<span class="btn-text expand-weather__temperature-container more">mer väder</span>
+						<span class="btn-text expand-weather__temperature-container less">visa mindre</span>
+					</button>
+
+
+					<!-- TODO: ta bort när allt är färdigtestat -->
+					<!-- <button id="toggleIconClasses">toggle icons</button> -->
+				</section>
+				
+
+				<div class="section-wrapper">
+					<div id="ajax-loader">
+						<div class="bounce1"></div>
+						<div class="bounce2"></div>
+						<div class="bounce3"></div>
+					</div>
+					
+					<section class="departure-container" id="departure-container"></section>
+				</div>
+		</div>
+	</main>
+	
+	<p id="log"></p>
+	
+	<button id="show-routes-menu" class="btn btn--bottom btn--routes-menu"><i class="fa fa-bars" aria-hidden="true"></i></button>
+	<button id="refresh" class="btn btn--bottom btn--refresh"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+	
+	<script src="js/polyfills.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
