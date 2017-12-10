@@ -206,6 +206,10 @@ function updateWeather() {
 }
 
 function updateDepartures(departureSiteId, destinationName) {
+	const updatedDate = new Date();
+	const updatedHour = updatedDate.getHours();
+	const updatedMinutes = updatedDate.getMinutes();
+	
 	const myDepartures = [];
 	const departureRequestUrl = 'getdepartures.php?departurestop='+departureSiteId;
 	ajaxLoader.style.display = '';
@@ -237,7 +241,7 @@ function updateDepartures(departureSiteId, destinationName) {
 			const transportMode     = myDepartures[i].TransportMode.toLowerCase();
 
 			const departureDate = new Date(departureDateTime);
-			const departureMs = (departureDate - d);
+			const departureMs = (departureDate - updatedDate);
 			const departureMins = Math.round(((departureMs % 86400000) % 3600000) / 60000);
 
 			const timeLeft = checkDeparture(departureMins);
@@ -247,10 +251,6 @@ function updateDepartures(departureSiteId, destinationName) {
 				departureContainer.insertAdjacentHTML('beforeend', departureRow);
 			}
 		}
-
-		const updatedDate = new Date();
-		const updatedHour = updatedDate.getHours();
-		const updatedMinutes = updatedDate.getMinutes();
 
 		updateLog('<i class="fa fa-check"></i>Uppdaterat '+ addZero(updatedHour) +':'+ addZero(updatedMinutes), false);
 	});
