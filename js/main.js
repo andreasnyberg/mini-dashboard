@@ -17,10 +17,10 @@ const myConfig = {
 			"destinationMenuName": "Gullmarsplan"
 		},
 		{ 
-			"siteId": "9128",
-			"departure": "Alléparken",
-			"destination": "Alvik",
-			"destinationMenuName": "Alvik"
+			"siteId": "9427",
+			"departure": "Storängen (Nacka)",
+			"destination": "Henriksdal",
+			"destinationMenuName": "Sickla"
 		},
 		{ 
 			"siteId": "9189",
