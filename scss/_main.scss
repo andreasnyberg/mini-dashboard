@@ -439,8 +439,8 @@ body {
 
 		position: absolute;
 
-		&.from { left: $col-width; }
-		&.to { right: $col-width; }
+		&.to { left: $col-width; }
+		&.from { right: $col-width; }
 
 	}
 }
